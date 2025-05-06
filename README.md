@@ -34,5 +34,7 @@ Additional configurations are
 
 These files are copied into target/classes/DataVault.
 
+## Results
+The Maven build (with `mvn clean install`) puts all required results into target/classes/DataVault.
 
  
