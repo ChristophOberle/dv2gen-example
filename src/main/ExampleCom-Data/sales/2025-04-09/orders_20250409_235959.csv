@@ -1,0 +1,4 @@
+"OrderID";"CustomerID";"CustomerName";"PositionID";"ProductID";"ProductName";"Amount";"Unit";"DateOfPurchase";"PricePerUnit";"Price"
+4;118;"ThirdCompany";1;4711;"Black Pepper";3;"100gr-pack";2025-04-09;3.79;11.37
+4;118;"ThirdCompany";2;3309;"Sea Salt";2;"250gr-box";2025-04-09;0.87;1.74
+4;118;"ThirdCompany";3;1482;"Brownies";1;"300gr-pack";2025-04-09;5.29;5.29
