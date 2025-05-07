@@ -37,4 +37,9 @@ These files are copied into target/classes/DataVault.
 ## Results
 The Maven build (with `mvn clean install`) puts all required results into target/classes/DataVault.
 
+## ToDos
+We will add a CI/CD pipeline to put target/classes/DataVault into a Docker image 
+and automatically deploy to the dev environment.
+
+
  
