@@ -37,6 +37,16 @@ These files are copied into target/classes/DataVault.
 ## Results
 The Maven build (with `mvn clean install`) puts all required results into target/classes/DataVault.
 
+## Data Load Processes
+All batch scripts are written in Powershell so that they can be used in different operating system environments. 
+
+To load the data into the DWH some batch scripts are provided:
+* 0201_psa.ps1 - to load the data from the source tables into the PSA tables for one load_date
+* 0301_load_full_refresh.ps1 - to load the data into the DWH tables for one load_date ignoring the actual DWH data
+* 0302_load.ps1 - to load the data into the DWH tables for one load_date
+
+To run the dbt commands the Powershell module dbtModule.psm1 is used.
+
 ## ToDos
 * Describe the batch scripts
 * Describe the set-up of the database
