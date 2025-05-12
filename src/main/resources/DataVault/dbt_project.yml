@@ -89,19 +89,19 @@ models:
         tags:
           - 'raw_vault_vxts'
         materialized: view
-    s05_bv_raw_stage:
-      tags:
-        - 'bv_raw'
-      materialized: view
-      +grants:
-          select: ['dwh_admins']
-    s06_bv_stage:
-      tags:
-        - 'bv_stage'
-      enabled: true
-      materialized: table
-      +grants:
-          select: ['dwh_admins']
+    #s05_bv_raw_stage:
+    #  tags:
+    #    - 'bv_raw'
+    #  materialized: view
+    #  +grants:
+    #      select: ['dwh_admins']
+    #s06_bv_stage:
+    #  tags:
+    #    - 'bv_stage'
+    #  enabled: true
+    #  materialized: table
+    #  +grants:
+    #      select: ['dwh_admins']
     s07_business_vault:
       tags:
         - 'business_vault'

@@ -16,15 +16,22 @@
 
               @name - name of the target (usually dev, test, prod)
               @server - hostname of the DB server
+              @port - port of the DB server
               @database - name of the Postgres database
               @schema - Name of the DV2 schema in the database
               @dbms - Name of the dbms (currently only postgresql)
+              @datavault_dir - path to the DataVault directory on the server
+              @log_dir - path to the log directory on the server
               -->
             <target name="dev"
-                    server="db"
-                    database="DataVault"
+                    server="localhost"
+                    port="15432"
+                    database="ExampleCom"
                     schema="DATAVAULT"
-                    dbms="postgresql">
+                    dbms="postgresql"
+                    datavault_dir="<path-to-mave-project-dv2gen-example>/target/classes/DataVault"
+                    import_dir="<path-to-mave-project-dv2gen-example>/src/test/resources/ExampleCom-Data"
+                    log_dir="<path-to-home-dir-of-user>/logs/DataVault">
                 <!--
                   Information on all sources used for this target
 
@@ -35,15 +42,9 @@
                   @dbms - name of the dbms (currently only postgresql)
                   -->
                 <source name="sales"
-                        database="DataVault"
+                        database="ExampleCom"
                         schema="SALES"
                         dbms="postgresql"/>
-                <!--
-                  Import directory on the DB server with exports from the data sources
-
-                  This definition is used by /db_sources/file_import
-                  -->
-                <import_dir name="sales" dir="/opt/datavault/import"/>
             </target>
         </system>
     <!--
@@ -81,7 +82,7 @@
               Information on csv files and import scripts for this DB source
 
               @script_dir - subdirectory for the scripts generated for this DB source
-              @import_dir - the subdirectory for this DB source in /system/target/import_dir
+              @import_dir - the subdirectory for this DB source in /system/target/@import_dir
               @timestamp - an indicator whether the file names in import_dir have a suffix _yyyymmdd_hhmmss
               @header - an indicator whether the csv files contain a header line
               -->

@@ -11,7 +11,7 @@
 # Parameter load_date - controls for which load_date the data from the PSA tables will be loaded to the Data Vault
 #                       Default is: current date minus 1 day
 #
-param([string]$target = "dev", [string]$select = "tag:as-of-date tag:raw+", [string]$load_date = ((Get-Date).AddDays(-1).ToString("yyyy-MM-dd")))
+param([string]$target = "dev", [string]$select = "tag:as_of_date tag:raw+", [string]$load_date = ((Get-Date).AddDays(-1).ToString("yyyy-MM-dd")))
 
 #################
 # here we go ...

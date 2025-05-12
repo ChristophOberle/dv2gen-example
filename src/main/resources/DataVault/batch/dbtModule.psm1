@@ -1,3 +1,10 @@
+# dbtModule.psm1
+# dbt Module to execute SQL statements in a Postgres dbms
+#
+# function dbt_run
+#
+# executes a dbt run command
+#
 function dbt_run {
     param( [ValidateNotNullOrEmpty()][string]$target = "dev"
     , [ValidateNotNullOrEmpty()][string]$select = "tag:raw+"

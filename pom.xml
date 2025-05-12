@@ -13,13 +13,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <repositories>
+        <repository>
+            <name>Central Portal Snapshots</name>
+            <id>central-portal-snapshots</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <build>
         <!-- To use the plugin goals in your POM or parent POM -->
         <plugins>
             <plugin>
                 <groupId>de.elrebo.plugins</groupId>
                 <artifactId>dv2gen-maven-plugin</artifactId>
-                <version>1.0.0</version>
+                <version>1.0.1-SNAPSHOT</version>
                 <executions>
                     <execution>
                         <id>validate-dv2gen</id>
