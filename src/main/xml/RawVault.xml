@@ -29,9 +29,9 @@
                     database="ExampleCom"
                     schema="DATAVAULT"
                     dbms="postgresql"
-                    datavault_dir="<path-to-mave-project-dv2gen-example>/target/classes/DataVault"
-                    import_dir="<path-to-mave-project-dv2gen-example>/src/test/resources/ExampleCom-Data"
-                    log_dir="<path-to-home-dir-of-user>/logs/DataVault">
+                    datavault_dir="<path-to-maven-project>/dv2gen-example/target/classes/DataVault"
+                    import_dir="<path-to-maven-project>/dv2gen-example/src/test/resources/ExampleCom-Data"
+                    log_dir="<path-to-logs-dir>/logs/DataVault">
                 <!--
                   Information on all sources used for this target
 

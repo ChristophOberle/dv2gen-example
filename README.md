@@ -34,7 +34,6 @@ Additional configurations are
 * src/main/resources/DataVault/dbt_project.yml - the dbt project configuration
 * src/main/resources/DatVault/packages.yml - the dbt packages used
 * src/main/resources/DataVault/sql_scripts/DatabaseGrants/ - Scripts to initialize the DWH database
-* src/main/resources/DataVault/batch - batch scripts to run the DWH processes
 
 These files are copied into target/classes/DataVault.
 
