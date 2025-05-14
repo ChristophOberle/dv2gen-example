@@ -2,10 +2,10 @@
     <!--
       Example XML configuration for the RawVault
 
-      @schemaVersion - the schema version of this configuration file (current version is 3)
+      @schemaVersion - the schema version of this configuration file (current version is 4)
       @company - the name of the company for which the DWH is built
       -->
-    <raw_vault schema_version="3" company="ExampleCom" >
+    <raw_vault schema_version="4" company="ExampleCom" >
         <!--
           Information on the DWH system
           For a system different targets can be defined.
@@ -21,6 +21,7 @@
               @schema - Name of the DV2 schema in the database
               @dbms - Name of the dbms (currently only postgresql)
               @datavault_dir - path to the DataVault directory on the server
+              @import_dir - path to the import directory on the server
               @log_dir - path to the log directory on the server
               -->
             <target name="dev"
@@ -31,7 +32,7 @@
                     dbms="postgresql"
                     datavault_dir="<path-to-maven-project>/dv2gen-example/target/classes/DataVault"
                     import_dir="<path-to-maven-project>/dv2gen-example/src/test/resources/ExampleCom-Data"
-                    log_dir="<path-to-logs-dir>/logs/DataVault">
+                    log_dir="<path-to-logs-directory/logs/DataVault">
                 <!--
                   Information on all sources used for this target
 

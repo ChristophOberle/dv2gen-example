@@ -4,7 +4,7 @@
 
     <groupId>de.elrebo</groupId>
     <artifactId>dv2gen-example</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>ExampleCom Data Warehouse</name>
@@ -33,7 +33,7 @@
             <plugin>
                 <groupId>de.elrebo.plugins</groupId>
                 <artifactId>dv2gen-maven-plugin</artifactId>
-                <version>1.0.1-SNAPSHOT</version>
+                <version>1.0.1</version>
                 <executions>
                     <execution>
                         <id>validate-dv2gen</id>
@@ -54,6 +54,13 @@
                         </goals>
                     </execution>
                 </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <overwrite>true</overwrite>
+                </configuration>
             </plugin>
         </plugins>
     </build>
