@@ -15,7 +15,7 @@ From sales you get a daily CSV file - listing all the sales orders of that day.
 Your first challenge is to load the sales orders into your data warehouse.
 
 ## Sales Data
-In directory src/test/resources/ExampleCom-Data/sales/ the orders from the sales department of ExampleCom 
+In directory ``src/test/resources/ExampleCom-Data/sales/`` the orders from the sales department of ExampleCom 
 from 2025-04-07 until 2025-04-12 are given.
 
 At the moment this is the only input for our data warehouse.
@@ -25,23 +25,20 @@ The location of the directory is defined in src/main/xml/RawVault.xml.
 The XPath is: ``concat(/system/target[@name = "dev"]/@import_dir, '/', /db_sources/db_source[name = "sales"]/file_import/@import_subdir)``
 
 ## Data Warehouse Configuration
-In directory src/main/xml the data warehouse configuration in given in two XML files: RawVault.xml and BusinessVault.xml.
+In directory ``src/main/xml`` the data warehouse configuration in given in two XML files: ``RawVault.xml`` and ``BusinessVault.xml``.
 
 This configuration is used by the dv2gen-maven-plugin to generate the needed artifacts for the data warehouse
-in target/classes/DataVault. 
+in ``target/classes/DataVault``. 
 
-Some additional files are generated in target/classes/templates. These files must be manually checked and copied 
-to target/classes/DataVault and to the user's home directory. 
+Some additional files are generated in ``target/classes/templates``. These files must be manually checked and copied 
+to ``target/classes/DataVault`` and to the user's home directory. 
 
 In the templates directory the following files are placed: 
-* target/classes/templates/DataVault/dbt_project.yml - the dbt project configuration, add individual configurations
-and copy to target/classes/DataVault/dbt_project.yml 
-* src/main/resources/DataVault/sql_scripts/DatabaseGrants/ - Scripts to initialize the DWH database
+* ``target/classes/templates/DataVault/dbt_project.yml`` - the dbt project configuration, add individual configurations
+and copy to ``target/classes/DataVault/dbt_project.yml`` 
+* ``target/classes/templates/DataVault/sql_scripts/DatabaseGrants/`` - Scripts to initialize the DWH database
 
-In addition there are some files in src/main/ressources/DataVault which are copied into target/classes/DataVault:
-* src/main/resources/DatVault/packages.yml - the dbt packages used
-
-You can add files here to overwrite the generated artifacts mentioned earlier.
+You can add files in ``src/main/resources/DataVault`` to overwrite the generated artifacts mentioned earlier or to add your own scripts and models to the DataVault.
 
 ## Build Process
 The Maven build (with `mvn clean install`) puts all required results into target/classes/DataVault.
